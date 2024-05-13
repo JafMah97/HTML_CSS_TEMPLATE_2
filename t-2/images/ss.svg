@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" style="filter: url('#inner-shadow-filter-0') url('#drop-shadow-filter-0') url('#inner-shadow-filter-1');" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="inner-shadow-filter-2" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur stdDeviation="5"/>
+      <feComposite operator="out" in="SourceGraphic"/>
+      <feComponentTransfer result="choke">
+        <feFuncA type="linear" slope="0.86"/>
+      </feComponentTransfer>
+      <feFlood flood-color="#ffffffb3" result="color"/>
+      <feComposite operator="in" in="color" in2="choke" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+    <filter id="inner-shadow-filter-3" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="-12"/>
+      <feGaussianBlur stdDeviation="6"/>
+      <feComposite operator="out" in="SourceGraphic"/>
+      <feComponentTransfer result="choke">
+        <feFuncA type="linear" slope="2"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.7)" result="color"/>
+      <feComposite operator="in" in="color" in2="choke" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path d="M 195 14.55 Q 250 -14.55 305 14.55 L 445.001 88.625 Q 500.002 117.725 500.002 175.926 L 500.002 324.074 Q 500.002 382.275 445.001 411.376 L 305 485.449 Q 250 514.55 195 485.45 L 54.999 411.376 Q -0.002 382.275 -0.002 324.074 L -0.002 175.926 Q -0.002 117.725 54.999 88.624 Z" style="stroke: rgb(193, 0, 0); stroke-width: 0px; mix-blend-mode: darken; fill: rgb(223, 21, 21); filter: url('#inner-shadow-filter-2') url('#inner-shadow-filter-3');" transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, 0)"/>
+</svg>
